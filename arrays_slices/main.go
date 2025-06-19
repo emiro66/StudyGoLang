@@ -163,4 +163,5 @@ func getSlice() {
 
 	fullSlice := intArr[:] // выводит все значения
 	fmt.Println(fullSlice)
+	//
 }
