@@ -165,3 +165,7 @@ func getSlice() {
 	fmt.Println(fullSlice)
 	//
 }
+
+// мапы
+
+//ball["Миша"] = 77  - добавление
