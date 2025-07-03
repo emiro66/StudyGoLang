@@ -25,6 +25,9 @@ func allNumbers() {
 }
 
 func findMinMax(numbers []int) (int, int) { //находит максимум и минимум
+	if len(numbers) == 0 {
+		return 0, 0
+	}
 	max := numbers[0]
 	min := numbers[0]
 	for i := 1; i < len(numbers); i++ {
@@ -68,7 +71,7 @@ func strings(input []string) (result []string) {
 			result = append(result, s) // то добавляется
 		}
 	}
-	return
+	return result //вернуть результат
 }
 
 //МАССИВЫ
@@ -92,7 +95,7 @@ func float32s() {
 	for _, value := range num { // создаем перем. value и через range перебираю каждое значение массива
 		value *= 1.1 //умножаем каждое знач на 1.1 (10%)
 		fmt.Println(value)
-		sum += value //массив = массив + value
+		sum += value
 	}
 	average := sum / float32(len(num)) //считает среднее значение
 	fmt.Println(average)
@@ -111,12 +114,12 @@ func isAllTrue(slice []bool) string {
 
 // МАПЫ
 func allMaps() {
-	ballMap()
+	scoresMap()
 
 }
 
-func ballMap() {
-	scores := map[string]int{ // создание мапы (перем присваиваетя мар[ключ]условие )
+func scoresMap() {
+	scores := map[string]int{ // создание мапы (перем. присваиваетя мар[ключ]условие )
 		"Александр": 57,
 		"Маша":      63,
 		"Алиса":     75,
@@ -136,7 +139,7 @@ func ballMap() {
 	fmt.Println(appendStudent(scores, "Александр", 77))
 
 	// удаление студента
-	fmt.Println(deleteStudent(scores, "Александр", 88))
+	fmt.Println(deleteStudent(scores, "Александр"))
 
 }
 
@@ -165,7 +168,7 @@ func appendStudent(studentMap map[string]int, name string, score int) (map[strin
 }
 
 // удаление студента
-func deleteStudent(studentMap map[string]int, name string, score int) (map[string]int, error) {
+func deleteStudent(studentMap map[string]int, name string) (map[string]int, error) {
 	_, exists := studentMap[name]
 	if !exists {
 
