@@ -10,11 +10,11 @@ type People struct {
 }
 
 func main() {
-	//crw()
+	crw()
 	//slices()
 	//variadicFunctions()
 	//convertPointer()
-	getSlice()
+	//getSlice()
 }
 
 // массив
@@ -165,3 +165,7 @@ func getSlice() {
 	fmt.Println(fullSlice)
 	//
 }
+
+// мапы
+
+//ball["Миша"] = 77  - добавление
