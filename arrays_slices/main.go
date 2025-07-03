@@ -10,11 +10,11 @@ type People struct {
 }
 
 func main() {
-	//crw()
+	crw()
 	//slices()
 	//variadicFunctions()
 	//convertPointer()
-	getSlice()
+	//getSlice()
 }
 
 // массив
